@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Final Project</title>
+    <style>
+      body {
+        background: repeating-radial-gradient(
+          328px at 2.9% 15%,
+          rgb(191, 224, 251) 0%,
+          rgb(232, 233, 251) 25.8%,
+          rgb(252, 239, 250) 50.8%,
+          rgb(234, 251, 251) 77.6%,
+          rgb(240, 251, 244) 100.7%
+        );
+      }
+      div {
+        display: block;
+        margin: 0 auto;
+        max-width: 700px;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(28, 142, 210) 0%,
+          rgb(113, 192, 244) 47.3%,
+          rgb(139, 238, 230) 88.4%
+        );
+        border-radius: 10px;
+        padding-bottom: 50px;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px 0px 0px 0px;
+        font-size: 40px;
+        position: relative;
+      }
+      h2 {
+        text-align: center;
+        padding: ;
+        font-size: 35px;
+        border: 2px solid #b061b6;
+        border-radius: 10px;
+        color: #b061b6;
+        max-width: 400px;
+        margin: 0 auto;
+        text-shadow: 2px 3px 7px #fff;
+      }
+      h3 {
+        text-align: center;
+        border: 2px solid #b061b6;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0px 7px 20px #0f4191;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50px;
+        padding: 10px;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        margin-bottom: 20px;
+        padding: 20px;
+
+        font-size: 20px;
+        border-radius: 100px;
+        border: none;
+        box-shadow: 7px 5px 10px #000;
+        background: linear-gradient(90deg, #6f7bcf, #6fcfeb, #fff, #961c9d);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #13578e;
+      }
+      button:hover {
+        background: transparent;
+        color: whitesmoke;
+        cursor: pointer;
+      }
+      a {
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .footer {
+        padding-top: 20px;
+        font-family: "Courier New", Courier, monospace;
+        opacity: 0.7;
+      }
+
+      .ad {
+        font-size: 30px;
+        padding: 0px 20px;
+      }
+      .text {
+        background: linear-gradient(
+          125deg,
+          #000,
+          #d30e64,
+          #fff,
+          #9a0f9a,
+          #d30e64
+        );
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .infos {
+        padding: 0px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="text">Travel For Life</h1>
+      <h2>Explore the world</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/865/original/diving.jpeg?1642133773"
+        alt="diving"
+        width="350"
+        height="250"
+      />
+
+      <h3 class="ad">
+        <strong
+          ><em
+            >Are you getting sick of Covid isolation and looking for new
+            adventurous activities?</em
+          ></strong
+        >
+      </h3>
+      <p class="infos">
+        <strong><em>Scuba diving</em></strong> is an exciting activity bringing
+        you face to face with marine life and introducing you to the underwater
+        world. To become a scaba diver, you must first learn and be certified by
+        an instructor how to properly use dive equipment such as a mask, fins,
+        regulator, BC vest, and tank.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Scuba_diving" target="_blank"
+        >Learn more about Scuba Diving</a
+      >
+      <button>Scuba diving classes</button>
+      <hr />
+      <p class="footer">
+        Created by Tiffy Sjoberg<br />
+        Contact: Thiffy.tf@gmail.com
+      </p>
+    </div>
+  </body>
+  <script>
+    function applyClass() {
+      let name = prompt("What is your name?");
+      alert("Welcome " + name + ". Are you ready for new activity?");
+      let age = prompt("How old are you?");
+      let swim = prompt("Can you swim?");
+      let rank = prompt("Rate your swiming skill from 1 to 10");
+      let h3 = document.querySelector("h3");
+      if (rank <= 5)
+        h3.innerHTML =
+          "Sorry " + name + ", <br/> You need to take swimming a class first🏊🏻‍♀️";
+      if (rank >= 6)
+        h3.innerHTML =
+          "Congratulations🎉" + name + ",<br/> You can join our classes 🤿";
+      if (swim === "no" || swim === "No" || swim === "NO")
+        h3.innerHTML =
+          "Sorry " + name + ", <br/> You need to take swimming a class first🏊🏻‍♀️";
+    }
+    let applyButton = document.querySelector("button");
+    applyButton.addEventListener("click", applyClass);
+  </script>
+</html>
